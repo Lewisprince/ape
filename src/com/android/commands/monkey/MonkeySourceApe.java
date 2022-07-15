@@ -817,7 +817,19 @@ public class MonkeySourceApe implements MonkeyEventSource {
     }
 
     protected void startRandomMainApp() {
-        generateEventsForAction(Action.getStartAction(ActionType.EVENT_START, randomlyPickMainApp()));
+        ComponentName app = randomlyPickMainApp();
+        generateEventsForAction(Action.getStartAction(ActionType.EVENT_START, app));
+        String cmd = "/data/local/tmp/frida-inject -s /data/local/tmp/hookall.js -n ";
+        String[] splitedName = app.getPackageName().split("\\.");
+        cmd = cmd.concat(splitedName[splitedName.length - 1]);
+        Logger.iformat("Hooking app: %s", app.getPackageName());
+        Logger.iformat("Using command: %s", cmd);
+        try{
+            Runtime.getRuntime().exec(cmd);
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+        
     }
 
     private void generateEventsForActionInternal(Action action) {

@@ -41,7 +41,7 @@
     <target name="assemble-windows" depends="compile" if="isWindows">
         <exec executable="cmd">
             <arg value="/C"/>
-            <arg value="dx.bat"/>
+            <arg value="..\dx.bat"/>
             <arg value="--dex"/>
             <arg value="--output=${dist.loc}"/>
             <arg value="${bin.dir}"/>

@@ -1,0 +1,8 @@
+line
+1657791975909 loadUrl hooked https://mobileproxy.bluekai.com/m.html?site=32417&AdID=9d39809d-18a4-41cc-9784-6a208c0c3add&id=a7131d9149c8499f7cb8075115&appVersion=4.9.4&adid=9d39809d-18a4-41cc-9784-6a208c0c3add
+1657791981186 loadUrl2 hooked http://room5.trivago.com/
+1657792003027 loadUrl2 hooked http://company.trivago.com/app-privacy-policy/
+1657792025795 loadUrl2 hooked http://room5.trivago.com/
+1657792043908 loadUrl2 hooked http://room5.trivago.com/
+1657792049809 loadUrl2 hooked http://room5.trivago.com/
+1657792063934 loadUrl2 hooked http://room5.trivago.com/
